@@ -120,3 +120,45 @@
 - 해시 자료 구조 사용 -> hashCode(), equals() 반드시 함께 재정의
 - 해시 함수 -> 해시 코드가 최대한 충돌하지 않도록 설계
 
+## 8. 컬렉션 프레임워크 - Set
+
+### 1. 자바가 제공하는 Set - HashSet, LinkedHashSet
+- Collection
+  - Set
+    - HashSet <- LinkedHashSet
+    - TreeSet
+- HashSet
+  - 해시 자료 구조를 사용해서 요소 저장
+  - 데이터의 유일설만 중요, 순서 미중요 시 적합, O(1)
+- LinkedHashSet
+  - 요소들은 추가된 순서대로 유지, 조회 시 추가된 순서대로 반환
+  - 데이터의 유일성과 함께 삽입 순서 유지 시 적합, O(1)
+- TreeSet
+  - 레드-블랙 트리 내부 사용
+  - 데이터를 정렬된 순서로 유지하면서 집합의 특성을 유지 시 적합, O(log n)
+- 자바 HashSet 최적화 -> 배열 크기의 75%를 넘어가면 배열의 크기를 2배로 증가, 증가된 크기를 기준으로 모든 요소에 해시 재적용
+
+## 9. 컬렉션 프레임워크 - Map, Stack, Queue
+
+### 1. 컬렉션 프레임워크 - Map 소개
+- Map : 키-값 쌍을 저정하는 자료 구조
+  - 키 -> 맵 내에서 유일
+  - 키 중복 불가, 값 중복 가능
+  - 순서 유지하지 않음
+  - HashMap <- LinkedHashMap
+  - TreeMap
+
+### 2. 컬렉션 프레임워크 - Map 구현체
+- Map 키 -> Set과 동일
+- key 옆에 value 추가 -> Map
+- HashMap
+  - 해시 사용해서 요소 저장
+  - 순서 미보장, O(1)
+- LinkedHashMap
+  - HashMap과 유사, 연결 리스트를 사용하여 삽입 순서 최근 접근 순서에 따라 요소 유지
+  - 입력 순서 보장, O(1)
+- TreeMap
+  - 레드-블랙 트리 기반
+  - 자연 순서 또는 생성자에 제공된 Comparator에 의해 정렬
+  - 키 정렬된 순서 저장, O(log n)
+
