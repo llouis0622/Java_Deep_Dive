@@ -162,3 +162,30 @@
   - 자연 순서 또는 생성자에 제공된 Comparator에 의해 정렬
   - 키 정렬된 순서 저장, O(log n)
 
+### 3. 스택 자료 구조
+- Stack : 후입 선출(LIFO, Last In First Out)
+- 자바 Stack 클래스 사용 X -> 하위 호환을 위해 존재, Deque 사용
+
+### 4. 큐 자료 구조
+- Queue : 선입 선출(FIFO, First In First Out)
+- Collection
+  - Queue
+    - Deque
+      - ArrayDeque
+      - LinkedList
+
+### 5. 덱 자료 구조
+- Deque : Double Ended Queue, 양쪽 끝에서 요소 추가/제거 가능
+- ArrayDeque : 특별한 원형 큐 자료 구조 사용 -> 성능 우수
+- LinkedList : 배열 구조 사용
+- Deque - Stack : push(), pop() 사용
+- Deque - Queue : poll(), offer() 사용
+
+## 10. 컬렉션 프레임워크 - 순회, 정렬, 전체 정리
+
+### 1. 순회 - Iterable, Iterator, 향상된 for문
+- 순회 : 자료 구조에 들어있는 데이터를 차례대로 접근해서 처리하는 것
+- Iterable : 반복 가능한, Iterator 반복자 반환
+- Iterator : 반복자, 다음 요소 확인/반환
+- for-each : 자료 구조 순회 목적
+
